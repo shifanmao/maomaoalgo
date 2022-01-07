@@ -16,3 +16,18 @@
 
 # 算法总结
 很多算法都有“一脉相承“的思路。所以这里我把算法的介绍顺序变成：搜索算法-->动态规划-->图论，因为我觉得有些算法这样引出这样比较好理解。
+
+| 引子      | 算法 |
+| ----------- | ----------- |
+| [DFS搜索](#dfs)      | (动态规划算法)[#dp] / DP可以理解成Memoization的迭代写法 (aka带备忘录的DFS)       |
+
+# DFS
+```python
+def dfs(x):
+  if x ...: # base case condition
+    return ... # base case
+
+  res = ... # initialization
+  ... # business lgic
+  return res
+```
