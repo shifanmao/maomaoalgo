@@ -14,20 +14,5 @@
 1. 用Python简单实现基础的数据结构。有些数据结构（比如说OrderedDict）都现成调库就行了，但是为了理解它们的读写速度啊，优缺点啊，用相对简单的数据结构（数组和链表）来简单实现能帮助理解。
 2. 介绍基本算法，提供一些算法模版。（1）搜索方法，（2）用动态规划来优化搜索速度，（3）如何求解图的性质或最值，（4）如何用数据流或多个机器来再加速。算法主要是提供一些思维方式，让我们从“能解决“到“能高效解决“地问题。
 
-# 使用Python要注意什么
-* 比如说下面这段程序用二分法来寻找长度为N排序数组x中的target。然而因为x[mid+1:]或者x[:mid]在Python中创建了新的List，所以下面这段程序的时间复杂度退化到了O(N)。
-
-```python
-def binarySearch(x, target):
-    if len(x)==0: return False
-    mid = len(x) >> 1
-    if target==x[mid]: return True
-    if target>x[mid]:
-        return binarySearch(x[mid+1:])
-    return binarySearch(x[:mid])
-```
-
-Python中函数的值是passed by assignment，所以要注意什么那些数据类型是能改变或会改变的。这个特性和其他语言很不一样。
-
 # 算法总结
 很多算法都有“一脉相承“的思路。所以这里我把算法的介绍顺序变成：搜索算法-->动态规划-->图论，因为我觉得有些算法这样引出这样比较好理解。
